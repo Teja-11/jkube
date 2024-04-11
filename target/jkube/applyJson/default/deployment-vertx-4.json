@@ -1,0 +1,348 @@
+{
+  "apiVersion" : "apps/v1",
+  "kind" : "Deployment",
+  "metadata" : {
+    "annotations" : {
+      "jkube.eclipse.org/git-branch" : "master",
+      "jkube.eclipse.org/git-commit" : "8f3834d0342bac49b98fcb23fccc68308510193d",
+      "jkube.eclipse.org/git-url" : "https://github.com/Teja-11/jkube"
+    },
+    "creationTimestamp" : "2024-04-11T00:55:31Z",
+    "generation" : 3,
+    "labels" : {
+      "app" : "vertx-4",
+      "app.kubernetes.io/managed-by" : "jkube",
+      "app.kubernetes.io/name" : "vertx-4",
+      "app.kubernetes.io/part-of" : "org.eclipse.jkube.quickstarts.maven",
+      "app.kubernetes.io/version" : "1.16.2",
+      "group" : "org.eclipse.jkube.quickstarts.maven",
+      "provider" : "jkube",
+      "version" : "1.16.2"
+    },
+    "managedFields" : [ {
+      "apiVersion" : "apps/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:metadata" : {
+          "f:annotations" : {
+            "." : { },
+            "f:jkube.eclipse.org/git-branch" : { },
+            "f:jkube.eclipse.org/git-commit" : { },
+            "f:jkube.eclipse.org/git-url" : { }
+          },
+          "f:labels" : {
+            "." : { },
+            "f:app" : { },
+            "f:app.kubernetes.io/managed-by" : { },
+            "f:app.kubernetes.io/name" : { },
+            "f:app.kubernetes.io/part-of" : { },
+            "f:app.kubernetes.io/version" : { },
+            "f:group" : { },
+            "f:provider" : { },
+            "f:version" : { }
+          }
+        },
+        "f:spec" : {
+          "f:progressDeadlineSeconds" : { },
+          "f:replicas" : { },
+          "f:revisionHistoryLimit" : { },
+          "f:selector" : { },
+          "f:strategy" : {
+            "f:rollingUpdate" : {
+              "." : { },
+              "f:maxSurge" : { },
+              "f:maxUnavailable" : { }
+            },
+            "f:type" : { }
+          },
+          "f:template" : {
+            "f:metadata" : {
+              "f:annotations" : {
+                "." : { },
+                "f:jkube.eclipse.org/git-branch" : { },
+                "f:jkube.eclipse.org/git-commit" : { },
+                "f:jkube.eclipse.org/git-url" : { }
+              },
+              "f:labels" : {
+                "." : { },
+                "f:app" : { },
+                "f:app.kubernetes.io/managed-by" : { },
+                "f:app.kubernetes.io/name" : { },
+                "f:app.kubernetes.io/part-of" : { },
+                "f:app.kubernetes.io/version" : { },
+                "f:group" : { },
+                "f:provider" : { },
+                "f:version" : { }
+              },
+              "f:name" : { }
+            },
+            "f:spec" : {
+              "f:containers" : {
+                "k:{\"name\":\"vertx\"}" : {
+                  "." : { },
+                  "f:env" : {
+                    "." : { },
+                    "k:{\"name\":\"HOSTNAME\"}" : {
+                      "." : { },
+                      "f:name" : { },
+                      "f:valueFrom" : {
+                        "." : { },
+                        "f:fieldRef" : { }
+                      }
+                    },
+                    "k:{\"name\":\"KUBERNETES_NAMESPACE\"}" : {
+                      "." : { },
+                      "f:name" : { },
+                      "f:valueFrom" : {
+                        "." : { },
+                        "f:fieldRef" : { }
+                      }
+                    }
+                  },
+                  "f:image" : { },
+                  "f:imagePullPolicy" : { },
+                  "f:livenessProbe" : {
+                    "." : { },
+                    "f:failureThreshold" : { },
+                    "f:httpGet" : {
+                      "." : { },
+                      "f:path" : { },
+                      "f:port" : { },
+                      "f:scheme" : { }
+                    },
+                    "f:periodSeconds" : { },
+                    "f:successThreshold" : { },
+                    "f:timeoutSeconds" : { }
+                  },
+                  "f:name" : { },
+                  "f:ports" : {
+                    "." : { },
+                    "k:{\"containerPort\":8080,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":8778,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    },
+                    "k:{\"containerPort\":9779,\"protocol\":\"TCP\"}" : {
+                      "." : { },
+                      "f:containerPort" : { },
+                      "f:name" : { },
+                      "f:protocol" : { }
+                    }
+                  },
+                  "f:readinessProbe" : {
+                    "." : { },
+                    "f:failureThreshold" : { },
+                    "f:httpGet" : {
+                      "." : { },
+                      "f:path" : { },
+                      "f:port" : { },
+                      "f:scheme" : { }
+                    },
+                    "f:periodSeconds" : { },
+                    "f:successThreshold" : { },
+                    "f:timeoutSeconds" : { }
+                  },
+                  "f:resources" : { },
+                  "f:securityContext" : {
+                    "." : { },
+                    "f:privileged" : { }
+                  },
+                  "f:terminationMessagePath" : { },
+                  "f:terminationMessagePolicy" : { }
+                }
+              },
+              "f:dnsPolicy" : { },
+              "f:restartPolicy" : { },
+              "f:schedulerName" : { },
+              "f:securityContext" : { },
+              "f:terminationGracePeriodSeconds" : { }
+            }
+          }
+        }
+      },
+      "manager" : "kubectl-client-side-apply",
+      "operation" : "Update",
+      "time" : "2024-04-11T00:55:31Z"
+    }, {
+      "apiVersion" : "apps/v1",
+      "fieldsType" : "FieldsV1",
+      "fieldsV1" : {
+        "f:status" : {
+          "f:conditions" : {
+            "." : { },
+            "k:{\"type\":\"Available\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            },
+            "k:{\"type\":\"Progressing\"}" : {
+              "." : { },
+              "f:lastTransitionTime" : { },
+              "f:lastUpdateTime" : { },
+              "f:message" : { },
+              "f:reason" : { },
+              "f:status" : { },
+              "f:type" : { }
+            }
+          },
+          "f:observedGeneration" : { },
+          "f:replicas" : { },
+          "f:unavailableReplicas" : { },
+          "f:updatedReplicas" : { }
+        }
+      },
+      "manager" : "kube-controller-manager",
+      "operation" : "Update",
+      "subresource" : "status",
+      "time" : "2024-04-11T01:22:41Z"
+    } ],
+    "name" : "vertx-4",
+    "namespace" : "default",
+    "resourceVersion" : "3781",
+    "uid" : "c4efb861-a477-4217-9a7b-929a2d49021f"
+  },
+  "spec" : {
+    "progressDeadlineSeconds" : 600,
+    "replicas" : 1,
+    "revisionHistoryLimit" : 2,
+    "selector" : {
+      "matchLabels" : {
+        "app" : "vertx-4",
+        "app.kubernetes.io/managed-by" : "jkube",
+        "app.kubernetes.io/name" : "vertx-4",
+        "app.kubernetes.io/part-of" : "org.eclipse.jkube.quickstarts.maven",
+        "group" : "org.eclipse.jkube.quickstarts.maven",
+        "provider" : "jkube"
+      }
+    },
+    "strategy" : {
+      "rollingUpdate" : {
+        "maxSurge" : "25%",
+        "maxUnavailable" : "25%"
+      },
+      "type" : "RollingUpdate"
+    },
+    "template" : {
+      "metadata" : {
+        "annotations" : {
+          "jkube.eclipse.org/git-branch" : "master",
+          "jkube.eclipse.org/git-commit" : "8f3834d0342bac49b98fcb23fccc68308510193d",
+          "jkube.eclipse.org/git-url" : "https://github.com/Teja-11/jkube"
+        },
+        "labels" : {
+          "app" : "vertx-4",
+          "app.kubernetes.io/managed-by" : "jkube",
+          "app.kubernetes.io/name" : "vertx-4",
+          "app.kubernetes.io/part-of" : "org.eclipse.jkube.quickstarts.maven",
+          "app.kubernetes.io/version" : "1.16.2",
+          "group" : "org.eclipse.jkube.quickstarts.maven",
+          "provider" : "jkube",
+          "version" : "1.16.2"
+        },
+        "name" : "vertx-4"
+      },
+      "spec" : {
+        "containers" : [ {
+          "env" : [ {
+            "name" : "KUBERNETES_NAMESPACE",
+            "valueFrom" : {
+              "fieldRef" : {
+                "apiVersion" : "v1",
+                "fieldPath" : "metadata.namespace"
+              }
+            }
+          }, {
+            "name" : "HOSTNAME",
+            "valueFrom" : {
+              "fieldRef" : {
+                "apiVersion" : "v1",
+                "fieldPath" : "metadata.name"
+              }
+            }
+          } ],
+          "image" : "maven/vertx-4:1.16.2",
+          "imagePullPolicy" : "IfNotPresent",
+          "livenessProbe" : {
+            "failureThreshold" : 3,
+            "httpGet" : {
+              "path" : "/",
+              "port" : 8080,
+              "scheme" : "HTTP"
+            },
+            "periodSeconds" : 10,
+            "successThreshold" : 1,
+            "timeoutSeconds" : 1
+          },
+          "name" : "vertx",
+          "ports" : [ {
+            "containerPort" : 8080,
+            "name" : "http",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 9779,
+            "name" : "prometheus",
+            "protocol" : "TCP"
+          }, {
+            "containerPort" : 8778,
+            "name" : "jolokia",
+            "protocol" : "TCP"
+          } ],
+          "readinessProbe" : {
+            "failureThreshold" : 3,
+            "httpGet" : {
+              "path" : "/",
+              "port" : 8080,
+              "scheme" : "HTTP"
+            },
+            "periodSeconds" : 10,
+            "successThreshold" : 1,
+            "timeoutSeconds" : 1
+          },
+          "resources" : { },
+          "securityContext" : {
+            "privileged" : false
+          },
+          "terminationMessagePath" : "/dev/termination-log",
+          "terminationMessagePolicy" : "File"
+        } ],
+        "dnsPolicy" : "ClusterFirst",
+        "restartPolicy" : "Always",
+        "schedulerName" : "default-scheduler",
+        "securityContext" : { },
+        "terminationGracePeriodSeconds" : 30
+      }
+    }
+  },
+  "status" : {
+    "conditions" : [ {
+      "lastTransitionTime" : "2024-04-11T00:55:31Z",
+      "lastUpdateTime" : "2024-04-11T00:55:31Z",
+      "message" : "Deployment does not have minimum availability.",
+      "reason" : "MinimumReplicasUnavailable",
+      "status" : "False",
+      "type" : "Available"
+    }, {
+      "lastTransitionTime" : "2024-04-11T01:05:32Z",
+      "lastUpdateTime" : "2024-04-11T01:05:32Z",
+      "message" : "ReplicaSet \"vertx-4-6c785d76dc\" has timed out progressing.",
+      "reason" : "ProgressDeadlineExceeded",
+      "status" : "False",
+      "type" : "Progressing"
+    } ],
+    "observedGeneration" : 2,
+    "replicas" : 1,
+    "unavailableReplicas" : 1,
+    "updatedReplicas" : 1
+  }
+}
